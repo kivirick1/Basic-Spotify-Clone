@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giriş Yap | Spotify</title>
+
+    <!-- Font Awesome İkonları -->
+    <script
+      src="https://kit.fontawesome.com/c22b165cf9.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Google Fonts'tan Montserrat Fontu -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+        font-style: normal;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #121313;
+      }
+
+      .login-container {
+        width: 100%;
+        max-width: 400px;
+        height: 100%;
+        padding: 15px;
+        margin: auto;
+      }
+
+      .login-container h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+      }
+
+      label {
+        font-weight: bold;
+        color: white;
+      }
+
+      input {
+        background-color: transparent;
+        outline: none;
+        border: 2px solid #7c7d7d;
+        color: white;
+        width: 100%;
+        padding: 15px 10px;
+        border-radius: 5px;
+        margin: auto;
+        margin-top: 10px;
+      }
+      input:hover {
+        border-color: white;
+      }
+
+      button {
+        width: 100%;
+        padding: 20px;
+        color: white;
+        background-color: transparent;
+        border-radius: 150px;
+        outline: none;
+        border: 2px solid #7c7d7d;
+        margin-block: 10px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      #loginbtn {
+        color: #010001;
+        background-color: #1ed760;
+        border: none;
+      }
+
+      span {
+        margin: auto;
+        display: block;
+        text-align: center;
+        color: #e9feff;
+        font-size: 17px;
+        margin-block: 20px;
+      }
+
+      a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        text-decoration: none;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <!-- Spotify Logo -->
+
+      <br />
+      <h2>
+        <i class="logo fa-brands fa-spotify"></i><br />
+        Tekrar<br />
+        hoş geldin
+      </h2>
+
+      <form action="/home.html" method="get">
+        <label>E-posta adresi veya kullanıcı adı</label>
+        <input type="text" />
+
+        <button type="submit" id="loginbtn">Devam</button>
+
+        <span>veya</span>
+
+        <button type="button">
+          <i class="fa-brands fa-google"></i> Google ile devam et
+        </button>
+        <button type="button">
+          <i class="fa-brands fa-facebook"></i> Facebook ile devam et
+        </button>
+        <button type="button">
+          <i class="fa-brands fa-apple"></i> Apple ile devam et
+        </button>
+
+        <span>Hesabın yok mu?</span>
+
+        <a href="#">Kaydol</a>
+      </form>
+    </div>
+  </body>
+</html>
