@@ -42,7 +42,9 @@
       <!-- BİLDİRİMLER VE PROFİL -->
       <div class="right">
         <i class="fa-regular fa-bell"></i>
-        <div style="cursor: pointer;" onclick="location.href = '/profile.html'"><span>A</span></div>
+        <div style="cursor: pointer" onclick="location.href = '/profile.html'">
+          <span>A</span>
+        </div>
       </div>
     </div>
 
@@ -181,13 +183,12 @@
               <span class="pl-info">Çalma Listesi • Arda Kart</span>
             </div>
           </div>
-          
         </div>
       </div>
       <!-- MAİN CONTENT -->
       <div class="maincontent">
         <div class="top">
-          <img src="img/liked.jpg" style="border-radius: 50%;" alt="Liked Songs" />
+          <img src="img/profile.png" style="border-radius: 50%" />
           <div>
             <span class="pl-1">Profil</span>
             <span class="pl-2">Arda Kart</span>
@@ -195,9 +196,37 @@
           </div>
         </div>
 
-        <div class="toplisten">
-          <div class="artist">
-            
+        <h1 style="margin: 15px; color: white">Çalma Listeleri</h1>
+        <div class="playlists" style="display: flex;">
+          <div
+            class="playlist"
+            style="
+              color: white;
+              display: flex;
+              flex-direction: column;
+              width: 180px;
+              margin: 15px;
+              gap: 5px;
+            "
+          >
+            <img src="img/liked.jpg" style="border-radius: 10px" />
+            <span><b>Beğenilen Şarkılar</b></span>
+            <span>Arda Kart</span>
+          </div>
+          <div
+            class="playlist"
+            style="
+              color: white;
+              display: flex;
+              flex-direction: column;
+              width: 180px;
+              margin: 15px;
+              gap: 5px;
+            "
+          >
+            <img src="img/playlist.webp" style="border-radius: 10px" />
+            <span><b>Coding Music 💻</b></span>
+            <span>Arda Kart</span>
           </div>
         </div>
       </div>
