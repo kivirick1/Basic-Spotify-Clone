@@ -90,6 +90,167 @@ body {
 
 .main {
   height: calc(100vh - 160px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.main .sidebar {
+  height: 100%;
+  width: 300px;
+  background-color: #131312;
+  border-radius: 10px;
+}
+.main .sidebar .title {
+  color: white;
+  padding-inline: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #393939;
+}
+.main .sidebar .title button {
+  height: 40px;
+  width: 40px;
+  background-color: #1f1f1f;
+  color: #b3b3b3;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.main .sidebar .playlists {
+  height: calc(100% - 100px);
+  overflow: auto;
+}
+.main .sidebar .playlists .playlist {
+  width: 95%;
+  margin: auto;
+  margin-top: 5px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.main .sidebar .playlists .playlist.active {
+  background-color: #4d4d4d;
+  border-radius: 5px;
+}
+.main .sidebar .playlists .playlist img {
+  height: 60px;
+  width: 60px;
+  border-radius: 5px;
+}
+.main .sidebar .playlists .playlist div {
+  width: calc(100% - 30px - 60px);
+  display: flex;
+  flex-direction: column;
+}
+.main .sidebar .playlists .playlist div .pl-name {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.main .sidebar .playlists .playlist div .pl-info {
+  color: #a1a1a0;
+  font-size: 0.9rem;
+}
+
+.main .maincontent {
+  height: 100%;
+  width: calc(100% - 330px);
+  background-color: #131312;
+  border-radius: 10px;
+  overflow: auto;
+}
+.main .maincontent .top {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  padding: 25px;
+}
+.main .maincontent .top img {
+  height: 80%;
+  border-radius: 10px;
+}
+.main .maincontent .top div {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.main .maincontent .top div .pl-1 {
+  font-size: 0.9rem;
+}
+.main .maincontent .top div .pl-2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.main .maincontent .top div .pl-3 {
+  font-size: 0.9rem;
+}
+.main .maincontent .playlist-controls {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 25px;
+}
+.main .maincontent .playlist-controls button {
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: #acadae;
+}
+.main .maincontent .playlist-songs {
+  width: 100%;
+}
+.main .maincontent .playlist-songs .song {
+  width: 100%;
+  height: 45px;
+  min-width: 460px;
+  display: flex;
+  color: #a1a1a0;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.main .maincontent .playlist-songs .song div {
+  width: calc(100% / 3 - 30px);
+}
+.main .maincontent .playlist-songs .song span {
+  margin-inline: 15px;
+}
+.main .maincontent .playlist-songs .song .songdetail {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+.main .maincontent .playlist-songs .song .songdetail img {
+  height: 40px;
+  border-radius: 5px;
+}
+.main .maincontent .playlist-songs .song .songdetail div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main .maincontent .playlist-songs .song .songdetail div .name {
+  font-weight: bold;
+  color: white;
+}
+.main .maincontent .playlist-songs .song .songdetail div .artist {
+  color: #a1a1a0;
+  font-size: 14px;
 }
 
 .player {
@@ -210,5 +371,40 @@ body {
   }
   .top .mid {
     width: 100%;
+  }
+  .player .right {
+    display: none;
+  }
+  .player .left,
+  .player .mid {
+    width: calc(100% / 2);
+  }
+  .player .mid {
+    padding-inline: 15px;
+  }
+  .main .sidebar {
+    width: 100px;
+  }
+  .main .sidebar .title h4 {
+    display: none;
+  }
+  .main .sidebar .title button {
+    margin: auto;
+    margin-block: 15px;
+  }
+  .main .sidebar .playlists .playlist div {
+    display: none;
+  }
+  .main .maincontent {
+    width: calc(100% - 130px);
+  }
+  .main .maincontent .playlist-songs .song div:last-child {
+    display: none;
+  }
+  .main .maincontent .playlist-songs .song div {
+    width: calc(100% / 2 - 30px);
+  }
+  .main .maincontent .playlist-songs .song .songdetail div {
+    display: flex;
   }
 }
