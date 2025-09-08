@@ -1,3 +1,20 @@
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
@@ -253,6 +270,21 @@ body {
   font-size: 14px;
 }
 
+.main .maincontent .playlists {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.main .maincontent .playlists .playlist {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  margin: auto;
+  margin-bottom: 15px;
+  gap: 5px;
+}
+
 .player {
   width: 100%;
   height: 90px;
@@ -355,6 +387,27 @@ body {
   background-color: white;
 }
 
+.expand {
+  position: relative;
+  height: calc(100vh - 160px + 70px);
+}
+
+.expand img.backgroundimage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(100px);
+}
+.expand img.coverimage {
+  width: 90%;
+  max-width: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 25px;
+  transform: translate(-50%,-50%);
+}
+
 @media only screen and (max-width: 1200px) {
   .top .left,
   .top .right {
@@ -362,6 +415,14 @@ body {
   }
   .top .mid {
     width: 80%;
+  }
+  .main .maincontent .playlists {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .main .maincontent .playlists {
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -371,6 +432,9 @@ body {
   }
   .top .mid {
     width: 100%;
+  }
+  .player {
+    position: relative;
   }
   .player .right {
     display: none;
@@ -406,5 +470,33 @@ body {
   }
   .main .maincontent .playlist-songs .song .songdetail div {
     display: flex;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .player .mid .player-controls button {
+    display: none;
+  }
+  #playbutton {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .player .mid .player-progress {
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%);
+  }
+  .player .mid .player-progress span {
+    display: none;
+  }
+  .player .mid .player-progress div {
+    width: calc(100% - 30px);
+  }
+  .main .maincontent .playlists {
+    grid-template-columns: 1fr;
   }
 }
